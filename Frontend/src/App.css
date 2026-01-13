@@ -1189,30 +1189,29 @@ nav .menu button:hover {
   font-weight: 500;
   border: 1px solid #0a305f;
 }
-nav .menu li a {
-  color: #f1f3f6;
+nav .menu li a,
+nav .menu button {
+  display: block;
+  padding: 10px 18px;
+  background: #3b4a5a;
+  border-radius: 8px;
+  color: #fff;
   text-decoration: none;
-  font-weight: 300;
-  font-size: 20px;
-  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0 #00f2fe;
+  border: none;
+  cursor: pointer;
 }
-nav .menu li a:hover {
-  color: #080909;
-  transition: all 0.3s;
-}
-nav .menu li a::before {
-  content: "";
-  position: absolute;
-  background: #0d0d0d;
-  height: 1px;
-  width: 100%;
-  left: -100%;
-  bottom: 0;
-  transition: all 0.3s;
-}
-nav .menu li a:hover::before {
-  transition: all 0.3s;
-  left: 0;
+
+/* Hover effect like sidebar */
+nav .menu li a:hover,
+nav .menu button:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+  transform: translateY(-3px);
 }
 nav .hamburger {
   display: none;
